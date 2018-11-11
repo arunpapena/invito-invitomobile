@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Events</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!--
+<div *ngFor="let image of images">
+    <img src="{{image}}"/>
+</div>
+<button (tap)="getAWSImage()">Get Image</button>
+<img src="{{awsimage}}">
+-->
+<ion-row>
+  <ion-col>
+      <button ion-button (tap)="createInvito()">
+          Create Event
+        </button>
+  </ion-col>
+  <ion-col>
+      <button ion-button>
+          QR Scanner
+        </button>
+  </ion-col>
+</ion-row>
+
+<button ion-button full outline>Event Photos</button>
+
+<button ion-button block outline>My Events</button>
+
+</ion-content>
+
+
+<ion-footer>
+  <!--   
+    <ion-fab right bottom>
+        <button ion-fab (tap)="imageSource()"><ion-icon name="camera"></ion-icon></button>
+    </ion-fab>
+  -->
+    Footer Content
+</ion-footer>

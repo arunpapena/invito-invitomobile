@@ -1,0 +1,7 @@
+{
+  "name": "invito-QC",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

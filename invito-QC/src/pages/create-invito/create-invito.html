@@ -1,0 +1,49 @@
+<ion-header>
+    <ion-navbar>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Event Details</ion-title>      
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+
+      <ion-fab top right edge>
+          <button ion-fab mini><ion-icon ios="ios-attach" md="md-attach"></ion-icon></button>
+          <ion-fab-list>
+            <button ion-fab (tap)="eventAttachment('photos')"><ion-icon ios="ios-image" md="md-image"></ion-icon></button>
+            <button ion-fab (tap)="eventAttachment('camera')"><ion-icon ios="ios-camera" md="md-camera"></ion-icon></button>
+            <button ion-fab><ion-icon ios="ios-videocam" md="md-videocam"></ion-icon></button>
+          </ion-fab-list>
+        </ion-fab>
+
+      <ion-item>
+            <ion-label color="primary" floating>Host</ion-label>
+            <ion-input [(ngModel)]="eventDetails.host" name="host"></ion-input>
+      </ion-item>
+      <ion-item>
+            <ion-label color="primary" floating>Event Name</ion-label>
+            <ion-input [(ngModel)]="eventDetails.eventName" name="eventName"></ion-input>
+      </ion-item>
+      <ion-item>    
+            <ion-label class="labeltext"><ion-icon ios="ios-calendar-outline" md="md-calendar"></ion-icon>    Date</ion-label>
+            <ion-datetime displayFormat="MMM DD, YYYY HH:mm" [(ngModel)]="eventDetails.eventDate" name="eventDate"></ion-datetime>
+      </ion-item>
+      <ion-item>
+          <ion-label class="labeltext">Reminder`</ion-label>
+          <ion-select [(ngModel)]="eventDetails.reminder" name="reminder">
+            <ion-option value="1">1</ion-option>
+            <ion-option value="2">2</ion-option>
+            <ion-option value="3">3</ion-option>
+            <ion-option value="4">4</ion-option>
+            <ion-option value="5">5</ion-option>
+          </ion-select>
+        </ion-item>
+      <!--<ion-item>
+        <button  (tap)="imageSource()">Choose or Capture<ion-icon name="camera"></ion-icon></button>
+      </ion-item>
+    -->
+      <button ion-button type="button" round outline (click)="invito()">Invito</button>
+  </ion-content>
+  
